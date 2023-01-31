@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "poetry-precommit-demo"
+version = "0.0.1"
+description = "Script to experiment with poetry and precommits"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "poetry_precommit_demo"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pendulum = "*"
+termcolor = "^2.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "*"
+black = "*"
+flake8 = "*"
+pydocstyle = {extras = ["toml"], version = "*"}
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = 'black'
+
+[tool.pydocstyle]
+convention = "numpy"
+add-ignore = "D100,D101,D102,D103,D104,D105,D106,D107"
