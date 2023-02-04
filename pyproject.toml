@@ -18,6 +18,8 @@ black = "*"
 flake8 = "*"
 pydocstyle = {extras = ["toml"], version = "*"}
 pre-commit = "*"
+pylint = "^2.16.1"
+toml = "^0.10.2"
 
 [build-system]
 requires = ["poetry-core"]
